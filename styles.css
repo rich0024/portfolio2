@@ -1,0 +1,274 @@
+body {
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 300vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "space"
+    "about"
+    "skills"
+    "projects"
+    "contact"
+    "footer"
+}
+.nav {
+    grid-area: nav;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(46, 46, 46);
+}
+.name {
+    font-family: "Copperplate", fantasy;
+    background-color: rgb(206, 206, 206);
+    border-style: solid;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    height: 70px;
+    padding: 5px;
+}
+.logos {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    height: 100px;
+    right: 10%;
+}
+a#logo {
+    background-color: rgb(46, 46, 46);
+    height: 60%;
+    width: 100px;
+    top: 20%;
+    position: relative;
+}
+h2#logo-1 {
+    display: none;
+    position:absolute;
+    top: 50%;
+    right: 20%;
+    color: white;
+    height: 20%;
+}
+h2#logo-2 {
+    display: none;
+    position:absolute;
+    top: 50%;
+    right: 20%;
+    color: white;
+}
+h2#logo-3 {
+    display: none;
+    position:absolute;
+    top: 50%;
+    right: 34%;
+    color: white;
+}
+h2#logo-4 {
+    display: none;
+    position:absolute;
+    top: 50%;
+    right: 20%;
+    color: white;
+}
+#logo1 {
+    background-image: url('vector-5@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    height: 100%;
+}
+#logo2 {
+    background-image: url('vector-3@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    height: 100%;
+}
+#logo3 {
+    background-image: url('vector-4@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    height: 100%;
+}
+#logo4 {
+    background-image: url('resume.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    height: 100%;
+}
+.space {
+    grid-area: space;
+    width: 100%;
+}
+#space {
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/19/15/45/sky-1753246_960_720.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.about{
+    grid-area: about;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(46, 46, 46);
+}
+#parag {
+    width: 500px;
+    color: rgb(255, 255, 255);
+    border-style: dashed;
+    border-radius: 15px;
+    background-color: black;
+    text-align: justify;
+    margin: 15px;
+    padding: 10px;
+}
+#label {
+    background-image: url('undraw_Coding_re_iv62.svg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    height: 80%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-size: 70px;
+}
+.skills{
+    grid-area: skills;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(206, 206, 206);
+}
+.skills-list {
+    list-style: none;
+    font-size: medium;
+    width: 200px;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.lists {
+    display: flex;
+    justify-content: space-around;
+}
+.projects{
+    grid-area: projects;
+    text-align: center;
+    background-color: rgb(46, 46, 46);
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+.con {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.recipe {
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    text-align: justify;
+    width: 30%;
+}
+.rails {
+    color: white;
+    border-style: solid;
+    border-radius: 15px;
+    background-color: black;
+    padding: 15px;
+    text-align: justify;
+    width: 30%;
+}
+.java {
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    text-align: justify;
+    width: 30%;
+}
+.contact{
+    grid-area: contact;
+    background-color: rgb(206, 206, 206);
+    display: inline-flex;
+    justify-content: center;
+}
+.contact-form {
+    border-radius: 5px;
+    padding: 20px;
+}
+#contact {
+    background-image: url('undraw_Personal_text_re_vqj3.svg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 50px;
+    width: 40%;
+    display: inline-block;
+}
+.form-group {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+}
+input[type=name] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(46, 46, 46);
+    height: 200px;
+    width: 100%;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+#footer {
+    position: relative;
+    top: 50%;
+}
