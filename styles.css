@@ -108,6 +108,9 @@ h2#logo-4 {
 .space {
     grid-area: space;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #space {
     background-image: url('https://cdn.pixabay.com/photo/2016/10/19/15/45/sky-1753246_960_720.png');
@@ -115,6 +118,33 @@ h2#logo-4 {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+}
+p#intro {
+    width: 100%;
+    top: 50%;
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+    font-family: Hack, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 4s linear 2;
+    position: absolute;
+}
+
+@keyframes shine {
+    0% {
+    background-position-x: -500%;
+    }
+    100% {
+    background-position-x: 500%;
+    }
 }
 .about{
     grid-area: about;
@@ -124,7 +154,7 @@ h2#logo-4 {
     background-color: rgb(46, 46, 46);
 }
 #parag {
-    width: 500px;
+    width: 600px;
     color: rgb(255, 255, 255);
     border-style: dashed;
     border-radius: 15px;
@@ -139,7 +169,7 @@ h2#logo-4 {
     background-attachment: local;
     background-position: center;
     background-size: cover;
-    height: 80%;
+    height: 95%;
     text-align: center;
     color: rgb(255, 255, 255);
     border-radius: 15px;
