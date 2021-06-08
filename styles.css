@@ -6,7 +6,7 @@ body {
     padding: 0;
     height: 375vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .9fr 1fr .4fr .2fr;
+    grid-template-rows: 1fr .9fr 1.25fr .5fr .1fr;
     grid-template-areas: 
     "space"
     "about"
@@ -164,7 +164,7 @@ p#intro {
     ;
     text-align: center;
     background-color: rgb(46, 46, 46);
-    height: 75vh;
+    height: 90vh;
     width: 100%;
 }
 .parag {
@@ -179,7 +179,7 @@ p#intro {
 }
 .label {
     grid-area: im;
-    background-image: url('undraw_Coding_re_iv62.svg');
+    background-image: url('undraw_creative_thinking_b3bc.svg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-position: center;
@@ -203,7 +203,8 @@ p#intro {
     height: 100%;
     width: 100%;
     color: white;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
 }
 .skills-list {
     list-style: none;
@@ -222,13 +223,14 @@ p#intro {
     grid-area: projects;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .2fr 1fr 1fr 1fr .2fr;
+    grid-template-rows: .1fr .6fr .6fr .6fr .1fr;
     align-items: center;
     text-align: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    height: 100vh;
+    height: 125vh;
+    padding: 10px;
 }
 .recipe {
     color: rgb(0, 0, 0);
@@ -269,7 +271,7 @@ p#intro {
     border-top-style: solid;
     border-top-right-radius: 25%;
     border-top-left-radius: 25%;
-    height: 65vh;
+    height: 50vh;
     width: 100%;
     background-color: rgb(46, 46, 46);
     display: grid;
