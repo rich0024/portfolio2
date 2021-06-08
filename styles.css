@@ -4,20 +4,17 @@ body {
     background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    height: 265vh;
+    height: 375vh;
     grid-template-columns: 1fr;
-    grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr .9fr 1fr .4fr .2fr;
     grid-template-areas: 
-    "nav"
     "space"
     "about"
-    "skills"
     "projects"
     "contact"
-    "footer"
+    "footer";
 }
 .nav {
-    grid-area: nav;
     display: flex;
     position: fixed;
     width: 100%;
@@ -107,17 +104,27 @@ h2#logo-4 {
 }
 .space {
     grid-area: space;
-    width: 100%;
+    width: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
 }
-#space {
+/* #space {
     background-image: url('https://cdn.pixabay.com/photo/2016/10/19/15/45/sky-1753246_960_720.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+} */
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
 p#intro {
     width: 100%;
@@ -148,44 +155,59 @@ p#intro {
 }
 .about{
     grid-area: about;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "im para"
+    "im skill"
+    ;
     text-align: center;
-    justify-content: center;
     background-color: rgb(46, 46, 46);
+    height: 75vh;
+    width: 100%;
 }
-#parag {
-    width: 600px;
+.parag {
+    grid-area: para;
+    width: 50%;
     color: rgb(255, 255, 255);
-    border-style: dashed;
     border-radius: 15px;
     background-color: black;
     text-align: justify;
     margin: 15px;
     padding: 10px;
+    height: fit-content;
 }
-#label {
+.label {
+    grid-area: im;
     background-image: url('undraw_Coding_re_iv62.svg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-position: center;
     background-size: cover;
     height: 95%;
+    width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
     border-radius: 15px;
     font-size: 70px;
 }
+#label {
+    width: 100%;
+}
 .skills{
-    grid-area: skills;
+    grid-area: skill;
     justify-content: center;
     text-align: center;
-    background-color: rgb(206, 206, 206);
-    height: 200px;
+    background-color: rgb(46, 46, 46);
+    height: 100%;
+    width: 50%;
+    color: white;
 }
 .skills-list {
     list-style: none;
     font-size: medium;
-    width: 200px;
+    width: 100%;
     align-content: center;
     margin: 0;
     padding: 0;
@@ -193,70 +215,91 @@ p#intro {
 .lists {
     display: flex;
     justify-content: space-around;
+    top: 100%;
 }
 .projects{
     grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr .2fr;
+    align-items: center;
     text-align: center;
-    background-color: rgb(46, 46, 46);
-    text-align: center;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-}
-.con {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 100vh;
 }
 .recipe {
     color: rgb(0, 0, 0);
-    border-style: solid;
-    border-radius: 15px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(255, 255, 255);
     padding: 15px;
+    box-shadow: 10px 5px 5px rgb(22, 22, 22);
     text-align: justify;
-    width: 30%;
+    position: relative;
+    margin: 10px;
+    width: 80%;
+    left: 10%;
 }
 .rails {
-    color: white;
-    border-style: solid;
-    border-radius: 15px;
-    background-color: black;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 15px;
+    box-shadow: 10px 5px 5px rgb(22, 22, 22);
     text-align: justify;
-    width: 30%;
+    position: relative;
+    margin: 10px;
+    width: 80%;
+    left: 10%;
 }
 .java {
     color: rgb(0, 0, 0);
-    border-style: solid;
-    border-radius: 15px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(255, 255, 255);
     padding: 15px;
+    box-shadow: 10px 5px 5px rgb(22, 22, 22);
     text-align: justify;
-    width: 30%;
+    position: relative;
+    margin: 10px;
+    width: 80%;
+    left: 10%;
 }
 .contact{
     grid-area: contact;
-    background-color: rgb(206, 206, 206);
-    display: inline-flex;
+    border-top: rgb(255, 255, 255);
+    border-top-style: solid;
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
+    height: 65vh;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-content: center;
+    grid-template-areas: 
+    ". form image image";
 }
-.contact-form {
-    border-radius: 5px;
+.form {
+    border-top: rgb(255, 255, 255);
+    border-top-style: double;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    color: rgb(255, 255, 255);
+    grid-area: form;
     padding: 20px;
+    height: 100%;
 }
 #contact {
+    color: rgb(255, 255, 255);
+    grid-area: image;
     background-image: url('undraw_Personal_text_re_vqj3.svg');
     background-repeat: no-repeat;
-    background-attachment: local;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     text-align: center;
     border-radius: 15px;
     font-size: 50px;
-    width: 40%;
-    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 .form-group {
     width: 60%;
@@ -268,7 +311,6 @@ input[type=name] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -277,23 +319,21 @@ input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 textarea {
     width: 100%;
-    height: 150px;
     padding: 12px 20px;
-    box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    resize: none;
+    height: 150px;
 }
 .footer {
     grid-area: footer;
+    height: 10vh;
     background-color: rgb(46, 46, 46);
     height: 200px;
     width: 100%;
